@@ -1,11 +1,10 @@
-let PROFILE_SIZE = 720;
 const MAX_WIDTH = 720;
 const MAX_HEIGHT = 720;
 const width = MAX_WIDTH;
 const height = MAX_HEIGHT;
 
 const PROFILE_IMG_SOURCE = 'assets/img/profile_placeholder.jpg';
-const LOGO_IMG_SOURCE = 'assets/img/photo_2021-08-28_00-57-24.svg';
+const LOGO_IMG_SOURCE = 'assets/img/logo_neotvr.svg';
 const ZOOM_IMG_SOURCE = 'assets/img/zoom.svg';
 
 const items = {};
@@ -97,10 +96,6 @@ function createProfileImg() {
     const profileImg = new Konva.Image({
         x: 0,
         y: 0,
-        // width: PROFILE_SIZE,
-        // height: PROFILE_SIZE,
-        // width: profileImgObj.attrs.width,
-        // height: profileImgObj.attrs.height,
         draggable: true,
         dragOnTop: false,
         name: 'profile',
@@ -117,10 +112,10 @@ function createLogoImg() {
         layer.add(logoImg);
         logoImg.setAttrs({
             // Right corner
-            x: 200,
+            x: 213,
             y: 150,
-            width: 320,
-            height: 425,
+            width: 285,
+            height: 310,
             draggable: true,
             dragOnTop: true,
 
@@ -161,6 +156,7 @@ function downloadURI(uri, name) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    // noinspection JSAnnotator
     delete link;
 }
 
